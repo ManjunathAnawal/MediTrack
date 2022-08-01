@@ -79,23 +79,23 @@ class MediTrackHomePageViewController: UIViewController {
         var dateComponents = DateComponents()
         if !isMorningTaken {
             dateComponents.hour = 11
-            requestLocalNotification(dateComponents: dateComponents, msg: "morning within 11 am", identifier: "MorningNotification")
+            requestLocalNotification(dateComponents: dateComponents, msg: "by 11 am this morning", identifier: "MorningNotification")
         }
         if !isAfternoonTaken {
             dateComponents.hour = 14
-            requestLocalNotification(dateComponents: dateComponents, msg: "afternoon within 2 pm", identifier: "AfternoonNotification")
+            requestLocalNotification(dateComponents: dateComponents, msg: "by 2 pm this afternoon", identifier: "AfternoonNotification")
         }
         if !isEveningTaken {
             dateComponents.hour = 20
-            requestLocalNotification(dateComponents: dateComponents, msg: "evening within 8 pm ", identifier: "EveningNotification")
+            requestLocalNotification(dateComponents: dateComponents, msg: "by 8 pm this evening", identifier: "EveningNotification")
         }
     }
     
     private func requestLocalNotification(dateComponents: DateComponents, msg: String, identifier: String ){
         let content = UNMutableNotificationContent()
-        content.title = "Hey!, you should had taken the tablet this" + msg
-        content.subtitle = "Missed it?"
-        content.body = "Look at me!"
+        content.title = "Hey!, should had taken the tablet"
+        content.subtitle = msg
+        content.body = "Missed it?"
         content.sound = UNNotificationSound.default
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
