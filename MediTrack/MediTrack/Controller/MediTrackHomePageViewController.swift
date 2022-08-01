@@ -248,12 +248,11 @@ extension Date {
     
     func getAllDays() -> [Date]{
         var days = [Date]()
-        let calendar = Calendar.current
-        let range = calendar.range(of: .day, in: .month, for: self)!
-        var day = firstDayOfTheMonth()
-        for _ in 1...range.count{
-            days.append(day)
-            day.addDays(n: 1)
+        let curDay = Calendar.current.component(.day, from: self)
+        var fstDay = firstDayOfTheMonth()
+        for _ in 1...curDay{
+            days.append(fstDay)
+            fstDay.addDays(n: 1)
         }
         return days
     }
