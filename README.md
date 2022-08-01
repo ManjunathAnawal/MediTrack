@@ -30,3 +30,7 @@ Morning medicine: 30, Afternoon medicine: 30, Night medicine: 40
 morning, 2pm for afternoon and 8pm for night. If user had already taken the medicine,
 then it ignores notification. It displays a local notification with proper message
 as to reminder user which time of day’s medication to be taken is pending.
+
+<img width="347" alt="Screenshot 2022-08-01 at 8 42 17 AM" src="https://user-images.githubusercontent.com/68315391/182064935-a4570c60-90e4-417b-bc11-bde430f8f589.png">
+
+
